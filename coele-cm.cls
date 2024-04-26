@@ -1,7 +1,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}[2023-11-01]
-\ProvidesClass{utfpr}[2024-04-01 UTFPR Class]
+\ProvidesClass{coele-cm}[2024-04-01 COELE-CM Class]
 \LoadClass[a4paper,12pt,oneside]{memoir}[2024-01-26]
 
 %-----------------------------------------------------------------
@@ -17,7 +17,7 @@
 \RequirePackage{longtable}							% tabelas longas, exigido pelo 'acro'
 \RequirePackage{acro}										% acrônimos e siglas
 \RequirePackage{xcolor}									% suprime warning to 'hyperref'
-\RequirePackage[a-1b]{pdfx}							% produz PDF/A
+\RequirePackage[a-3u,pdf17]{pdfx}				% produz PDF/A
 
 %---
 % Alterando \em e \emph{} (itálico já é usado em matemática e estrangeirismos): ênfase com \sl

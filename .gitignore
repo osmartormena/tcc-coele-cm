@@ -13,4 +13,5 @@
 *.synctex.gz
 *.tex.latexmain
 *.toc
+*.xmpdata
 *.xmpi
