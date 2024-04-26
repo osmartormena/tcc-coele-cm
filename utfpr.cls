@@ -11,7 +11,7 @@
 \RequirePackage[english,brazil]{babel}	% texto multilingual
 \RequirePackage{lmodern}								% fonte Latin Modern Roman
 \RequirePackage[T1]{fontenc}						% permite a hifenização de palavras acentuadas
-%\RequirePackage{microtype}							% melhora a quebra de linhas
+\RequirePackage{microtype}							% melhora a quebra de linhas
 \RequirePackage{graphicx}								% inclusão de figuras
 \RequirePackage{csquotes}								% recomendado pelo 'biblatex'
 \RequirePackage{longtable}							% tabelas longas, exigido pelo 'acro'
@@ -35,13 +35,13 @@
 
 %---
 % Configurando o microtype
-%\DeclareMicrotypeSet{lmodern}{%
-%	encoding={T1},
-%	family={rm*},
-%	series={md*,it*,bf*,sl*},
-%	size={normalsize,footnotesize}
-%}
-%\UseMicrotypeSet[protrusion]{lmodern}
+\DeclareMicrotypeSet{lmodern}{%
+	encoding={T1},
+	family={rm*},
+	series={md*,it*,bf*,sl*},
+	size={normalsize,footnotesize}
+}
+\UseMicrotypeSet[protrusion]{lmodern}
 %---
 
 %---
@@ -173,7 +173,7 @@
 	\renewcommand{\chapnumfont}{\chapterfont}%
 	\renewcommand{\chaptitlefont}{\centering\chapterfont}%
 	\renewcommand{\chapterheadstart}{}%
-	\renewcommand{\chapnamefont}{\chapterfont}%
+	\renewcommand{\printchaptername}{\chapterfont\appendixname}%
 	\renewcommand{\chapternamenum}{~}%
 	\renewcommand{\afterchapternum}{~---~}%
 	\renewcommand{\afterchapskip}{\onelineskip}
@@ -184,15 +184,14 @@
 	\cftinserthook{toc}{B}%
 	\chapterstyle{utfprprepos}%
 }
-\AddToHook{cmd/appendix/before}{%
-	\cftinserthook{toc}{At}%
+\AddToHook{env/appendices/begin}{%
+	\chapterstyle{utfprapp}%
+	\cftinserthook{toc}{Ap}%
 }
 \AddToHook{cmd/appendix/after}{%
-	\gdef\@chapapp{\enclname}%
+	\renewcommand{\appendixname}{\enclname}%
 	\chapterstyle{utfprapp}%
-}
-\AddToHook{cmd/@resets@pp/after}{%
-%	\cftinserthook{toc}{At}%
+	\cftinserthook{toc}{At}%
 }
 \setsecheadstyle{\sffamily\Large}
 \setsubsecheadstyle{\sffamily\large}
