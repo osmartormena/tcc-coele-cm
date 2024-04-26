@@ -1,0 +1,557 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{mec2021}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b5b7aa62cb314f3c4a80acf77ecce85c}{%
+           family={{Ministério da Educação}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b5b7aa62cb314f3c4a80acf77ecce85c}
+      \strng{fullhash}{b5b7aa62cb314f3c4a80acf77ecce85c}
+      \strng{fullhashraw}{b5b7aa62cb314f3c4a80acf77ecce85c}
+      \strng{bibnamehash}{b5b7aa62cb314f3c4a80acf77ecce85c}
+      \strng{authorbibnamehash}{b5b7aa62cb314f3c4a80acf77ecce85c}
+      \strng{authornamehash}{b5b7aa62cb314f3c4a80acf77ecce85c}
+      \strng{authorfullhash}{b5b7aa62cb314f3c4a80acf77ecce85c}
+      \strng{authorfullhashraw}{b5b7aa62cb314f3c4a80acf77ecce85c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Parecer CNE/CES n.º 948/2019}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb http://portal.mec.gov.br/index.php?option=com_docman&view=download&alias=128041-pces948-19&category_slug=outubro-2019&Itemid=30192
+      \endverb
+      \verb{url}
+      \verb http://portal.mec.gov.br/index.php?option=com_docman&view=download&alias=128041-pces948-19&category_slug=outubro-2019&Itemid=30192
+      \endverb
+    \endentry
+    \entry{cogep2021}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=44de341ea2a1cbeca29edc3575721b2d}{%
+           family={UTFPR},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{fullhash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{fullhashraw}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{bibnamehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authorbibnamehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authornamehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authorfullhash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authorfullhashraw}{44de341ea2a1cbeca29edc3575721b2d}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Resolução Conjunta COPPG/COGEP n.º 01/2021}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://sei.utfpr.edu.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&id_documento=2615190&id_orgao_publicacao=0
+      \endverb
+      \verb{url}
+      \verb https://sei.utfpr.edu.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&id_documento=2615190&id_orgao_publicacao=0
+      \endverb
+    \endentry
+    \entry{prograd2021}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=44de341ea2a1cbeca29edc3575721b2d}{%
+           family={UTFPR},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{fullhash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{fullhashraw}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{bibnamehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authorbibnamehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authornamehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authorfullhash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authorfullhashraw}{44de341ea2a1cbeca29edc3575721b2d}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Instrução Normativa PROGRAD/UTFPR n.º 8/2021}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://sei.utfpr.edu.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&id_documento=2651593&id_orgao_publicacao=0
+      \endverb
+      \verb{url}
+      \verb https://sei.utfpr.edu.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&id_documento=2651593&id_orgao_publicacao=0
+      \endverb
+    \endentry
+    \entry{coele2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=44de341ea2a1cbeca29edc3575721b2d}{%
+           family={UTFPR},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{fullhash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{fullhashraw}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{bibnamehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authorbibnamehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authornamehash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authorfullhash}{44de341ea2a1cbeca29edc3575721b2d}
+      \strng{authorfullhashraw}{44de341ea2a1cbeca29edc3575721b2d}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{title}{Instrução Normativa COELE-CM/UTFPR n.º 2/2023}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://sei.utfpr.edu.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&id_documento=3959590&id_orgao_publicacao=0
+      \endverb
+      \verb{url}
+      \verb https://sei.utfpr.edu.br/sei/publicacoes/controlador_publicacoes.php?acao=publicacao_visualizar&id_documento=3959590&id_orgao_publicacao=0
+      \endverb
+    \endentry
+    \entry{Knuth1986a}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=16ba958eaf56fad580491eef4f771cee}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima Ervin},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \strng{bibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorbibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authornamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Computers \& Typesetting, Vol. A: The Texbook}
+      \field{year}{1986}
+    \endentry
+    \entry{Lamport1994}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=5d77435450d10a850a5b58577b9a456b}{%
+           family={Lamport},
+           familyi={L\bibinitperiod},
+           given={Leslie},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison Wesley}%
+      }
+      \strng{namehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{fullhash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{fullhashraw}{5d77435450d10a850a5b58577b9a456b}
+      \strng{bibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorbibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authornamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorfullhash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorfullhashraw}{5d77435450d10a850a5b58577b9a456b}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{LaTeX: A document preparation system, User’s guide and reference manual}
+      \field{year}{1994}
+    \endentry
+    \entry{Knuth1986b}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=16ba958eaf56fad580491eef4f771cee}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima Ervin},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \strng{bibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorbibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authornamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Computers \& Typesetting, Vol. B: Tex: The Program}
+      \field{year}{1986}
+    \endentry
+    \entry{Knuth1986c}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=16ba958eaf56fad580491eef4f771cee}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima Ervin},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \strng{bibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorbibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authornamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \field{extraname}{3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Computers \& Typesetting, Vol. C: The Metafont Book}
+      \field{year}{1986}
+    \endentry
+    \entry{Knuth1986d}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=16ba958eaf56fad580491eef4f771cee}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima Ervin},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \strng{bibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorbibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authornamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \field{extraname}{4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Computers \& Typesetting, Vol. D: Metafont: The Program}
+      \field{year}{1986}
+    \endentry
+    \entry{Knuth1986e}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=16ba958eaf56fad580491eef4f771cee}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima Ervin},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \strng{bibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorbibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authornamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \field{extraname}{5}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Computers \& Typesetting, Vol. E: Computer Modern Typefaces}
+      \field{year}{1986}
+    \endentry
+    \entry{Thanh2024}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=becd0c04069043d4759deeea13fad711}{%
+           family={Thành},
+           familyi={T\bibinitperiod},
+           given={Hàn\bibnamedelima Thê},
+           giveni={H\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {The pdfTEX Team}%
+      }
+      \strng{namehash}{becd0c04069043d4759deeea13fad711}
+      \strng{fullhash}{becd0c04069043d4759deeea13fad711}
+      \strng{fullhashraw}{becd0c04069043d4759deeea13fad711}
+      \strng{bibnamehash}{becd0c04069043d4759deeea13fad711}
+      \strng{authorbibnamehash}{becd0c04069043d4759deeea13fad711}
+      \strng{authornamehash}{becd0c04069043d4759deeea13fad711}
+      \strng{authorfullhash}{becd0c04069043d4759deeea13fad711}
+      \strng{authorfullhashraw}{becd0c04069043d4759deeea13fad711}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The pdfTEX user manual}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://pdftex.org
+      \endverb
+      \verb{url}
+      \verb https://pdftex.org
+      \endverb
+    \endentry
+    \entry{Mittelbach2023}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=9355edd511e3f6fdd880ee98722a53fb}{%
+           family={Mittelbach},
+           familyi={M\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d6d562299dfc8afecf465b99cb1b455d}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Ulrike},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{67a85c89a7561a0c9fef05ec3a7b2b29}
+      \strng{fullhash}{67a85c89a7561a0c9fef05ec3a7b2b29}
+      \strng{fullhashraw}{67a85c89a7561a0c9fef05ec3a7b2b29}
+      \strng{bibnamehash}{67a85c89a7561a0c9fef05ec3a7b2b29}
+      \strng{authorbibnamehash}{67a85c89a7561a0c9fef05ec3a7b2b29}
+      \strng{authornamehash}{67a85c89a7561a0c9fef05ec3a7b2b29}
+      \strng{authorfullhash}{67a85c89a7561a0c9fef05ec3a7b2b29}
+      \strng{authorfullhashraw}{67a85c89a7561a0c9fef05ec3a7b2b29}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{The LaTeX Companion}
+      \field{year}{2023}
+    \endentry
+    \entry{tug2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=64123008e9604c1cbc35769a72859f1a}{%
+           family={Bibby},
+           familyi={B\bibinitperiod},
+           given={Duane},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{64123008e9604c1cbc35769a72859f1a}
+      \strng{fullhash}{64123008e9604c1cbc35769a72859f1a}
+      \strng{fullhashraw}{64123008e9604c1cbc35769a72859f1a}
+      \strng{bibnamehash}{64123008e9604c1cbc35769a72859f1a}
+      \strng{authorbibnamehash}{64123008e9604c1cbc35769a72859f1a}
+      \strng{authornamehash}{64123008e9604c1cbc35769a72859f1a}
+      \strng{authorfullhash}{64123008e9604c1cbc35769a72859f1a}
+      \strng{authorfullhashraw}{64123008e9604c1cbc35769a72859f1a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{TEX Friendly Zone logo}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.tug.org
+      \endverb
+      \verb{url}
+      \verb https://www.tug.org
+      \endverb
+    \endentry
+    \entry{memoir2001}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=939ad18f84ff6e59c3d1a6435b8ebd88}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {The Herries Press}%
+      }
+      \strng{namehash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{fullhash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{fullhashraw}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{bibnamehash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{authorbibnamehash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{authornamehash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{authorfullhash}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \strng{authorfullhashraw}{939ad18f84ff6e59c3d1a6435b8ebd88}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Memoir Class}
+      \field{year}{2001}
+      \verb{urlraw}
+      \verb https://linorg.usp.br/CTAN/macros/latex/contrib/memoir/memman.pdf
+      \endverb
+      \verb{url}
+      \verb https://linorg.usp.br/CTAN/macros/latex/contrib/memoir/memman.pdf
+      \endverb
+    \endentry
+    \entry{NBR6023}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
+           family={ABNT},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NBR 6023: Informação e Documentação --- Referências --- Elaboração}
+      \field{year}{2018}
+    \endentry
+    \entry{NBR6024}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
+           family={ABNT},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NBR 6024: Informação e Documentação --- Numeração progressiva das seções de um documento --- Apresentação}
+      \field{year}{2012}
+    \endentry
+    \entry{NBR6027}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
+           family={ABNT},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NBR 6027: Informação e Documentação --- Sumário --- Apresentação}
+      \field{year}{2012}
+    \endentry
+    \entry{NBR6028}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
+           family={ABNT},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \field{extraname}{4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NBR 6028: Informação e Documentação --- Resumo, Resenha e Recensão --- Apresentação}
+      \field{year}{2021}
+    \endentry
+    \entry{NBR10520}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
+           family={ABNT},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \field{extraname}{5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NBR 10520: Informação e Documentação --- Citações em Documentos --- Apresentação}
+      \field{year}{2023}
+    \endentry
+    \entry{NBR14724}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
+           family={ABNT},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{fullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \strng{authorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
+      \field{extraname}{6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NBR 14724: Informação e Documentação --- Trabalhos Acadêmicos --- Apresentação}
+      \field{year}{2011}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

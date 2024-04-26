@@ -1,0 +1,102 @@
+% Modelo canônico de TCC do curso de Engenharia Eletrônica da UTFPR campus Campo Mourão.
+%
+
+\documentclass[%
+%---
+% Escolha apenas uma das políticas de licenciamento
+	by,				% licença CC-BY
+%	by-sa,		% licença CC-BY-SA
+%	by-nd,		% licença CC-BY-ND
+%	by-nc,		% licença CC-BY-NC
+%	by-nc-sa,	% licença CC-NC-SA
+%	by-nc-nd,	% licença CC-BY-NC-ND
+%---
+%---
+% Escolha apenas um formato de citação ABNT
+%	alf	% citação (AUTOR, DATA), com referências em ordem alfabética
+	num	% citação numérica, com referências na ordem de citação
+%---
+]{utfpr}
+
+%-----------------------------------------------------------------
+% DADOS E CONFIGURAÇÕES PARTICULARES DO DOCUMENTO
+%-----------------------------------------------------------------
+
+\input{./preambulo/metadados}	% Metadados do trabalho
+\input{./preambulo/preambulo}	% Pacotes adicionais e macros do autor
+
+%-----------------------------------------------------------------
+% ARQUIVO DE REFERÊNCIAS
+%-----------------------------------------------------------------
+
+\addbibresource{./postextual/refs.bib}
+
+%-----------------------------------------------------------------
+% INÍCIO DO DOCUMENTO
+%-----------------------------------------------------------------
+
+\begin{document}
+
+%-----------------------------------------------------------------
+% PARTE EXTERNA
+%-----------------------------------------------------------------
+
+\maketitle	% Capa
+
+%-----------------------------------------------------------------
+% PARTE INTERNA
+%-----------------------------------------------------------------
+
+%-----------------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+%-----------------------------------------------------------------
+
+\frontmatter
+\maketitlepage		% Folha de rosto
+\approval					% Folha de aprovação
+\dedication				% Dedicatória (opcional)
+\acknowledgment		%	Agradecimentos (opcional)
+\printepigraph		% Epígrafe (opcional)
+\printabstract		% Resumo
+\printengabstract	% Abstract
+\printlof					% Lista de figuras (opcional)
+\printlot					% Lista de tabelas (opcional)
+\printloa					% Lista de acrônimos e siglas (opcional)
+\printtoc					% Sumário
+
+%-----------------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+%-----------------------------------------------------------------
+
+\mainmatter
+\include{./textual/introducao}
+\include{./textual/teoria}
+\include{./textual/metodologia}
+\include{./textual/resultados}
+\include{./textual/conclusao}
+
+%-----------------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+%-----------------------------------------------------------------
+
+\backmatter
+\printbibliography
+
+%---
+% Apêndices
+\begin{appendices}
+\include{./postextual/apendice}
+\end{appendices}
+%---
+
+%---
+% Anexos
+\appendix
+\include{./postextual/anexo}
+%---
+
+%-----------------------------------------------------------------
+% FIM DO DOCUMENTO
+%-----------------------------------------------------------------
+
+\end{document}
