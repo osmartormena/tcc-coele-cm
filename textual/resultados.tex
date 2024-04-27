@@ -1,8 +1,35 @@
-\chapter{Resultados e discussões}
+\chapter{Resultados e discussões}\label{cap:resultados}
 
-Escreva aqui os resultados e discussões pertinentes do seu trabalho.
+O resultado de todo o presente esforço é o documento em mãos. Idealmente, ele atende à todas as normas \ac{abnt} e também agrada às idiossincrasias do autor, orientador, \ac{pratcc} e bibliotecário\footnote{Boa sorte!}. Adicionalmente, espera"-se que o documento compile rapidamente, especialmente para quem estiver utilizando o Overleaf.
+
+Certamente que um dos principais fatores no tempo de compilação é o número de páginas no \ac{pdf} resultante. O presente texto possui número de páginas similar ao de um \ac{tcc} pequeno. Outro fator determinante é o número e forma de importação de figuras.
+
+Fotografias devem ser importadas no formato \ac{jpeg}. Sua qualidade e resolução deve ser suficiente para a apresentação no documento. Embora seja possível escalar uma figura para que ela caiba no texto\footnote{Veja a documentação do comando \texttt{$\backslash$includegraphics}, do pacote \texttt{graphicx}.}, isso consome tempo e recursos. A largura da página A4, exceto pelas margens exigidas pelas normas \ac{abnt}, é de 16~cm. Pré"-processe suas figuras para que elas não excedam essa largura e para que o tamanho do \ac{jpeg} não seja excessivo --- pois isso será embutido no \ac{pdf} final.
+
+Imagens vetoriais (\lat{e.g.} gráficos, diagramas de circuitos, etc.) devem ser importadas no formato \ac{png} ou \ac{pdf}. Especialmente no caso do \ac{png}, o arquivo pode ser reduzido se o canal alfa (transparência) for removido\footnote{Isso foi feito para os símbolos da licença Creative Commons, embutidos na folha de rosto.}. As mesmas considerações sobre a necessidade de redimensionar as imagens \ac{jpeg} valem para as imagens \ac{png} e \ac{pdf} incluídas.
+
+Uma boa dica é: exerça parcimônia ao adicionar figuras em seu trabalho. Pode ser uma forma rápida e fácil de \enquote{encher linguiça} e dar mais corpo ao trabalho, porém isso pode atrasar (e muito) seu tempo de compilação. Nunca insira uma fotografia como um \ac{png}. Jamais insira um gráfico como \ac{jpeg}.
+
+Um último detalhe relevante para o tempo de compilação, especialmente trabalhos longos com muito texto, é a utilização do pacote \texttt{microtype}. Ele aumenta (muito) a complexidade dos cálculos para o algoritmo de quebra de linha e hifenização do \TeX. A Tabela~\ref{tab:time} traz as informações de tempo de compilação do presente documento.
 
 \begin{table}
 	\caption{Tempo de compilação.}
 	\label{tab:time}
+	\begin{tabular}{r c c c c}\toprule
+		\multirow{2}{*}{Plataforma}	&	\multicolumn{2}{c}{Com \texttt{microtype}}	&	\multicolumn{2}{c}{Sem \texttt{microtype}}\\
+								&	Compilação	& Re-compilação	& Compilação	& Re-compilação\\\midrule
+		Local	&	s	&	6,8 s	&	s	&	6,2 s\\
+		Overleaf	&	s	&	s	&	s	&	s\\\bottomrule
+	\end{tabular}
+	\legend{Fonte~---~Autoria própria.}
 \end{table}
+
+A plataforma local é um MacBook Pro (Retina, 13-inch, Early 2015): com processador 2,7 GHz Dual-Core Intel Core i5; memória de 8 GB 1867 MHz DDR3; placa gráfica Intel Iris Graphics 6100 1536 MB; com sistema operacional macOS Monterey (12.7.4). Uma versão atualizada do TeX Live 2024 foi instalada.
+
+A plataforma Overleaf ainda não oferece o TeX Live 2024, sendo necessárias poucas modificações na classe para rodar no TeX Live 2023. O tempo limite de 20~s para a compilação do \ac{pdf} na conta gratuita será desafiadora de atingir.
+
+A compilação exige rodar o \pdflatex\ uma vez, seguido de uma execução do \texttt{biber} e, finalmente, duas execuções consecutivas do \pdflatex. Isso é feito automaticamente pelo \texttt{latexmk}. Assim, todos os arquivos de suporte para produção da cópia final são populados e ficam disponíveis. A re"-compilação exige, normalmente, apenas uma execução do \pdflatex. No caso de alguma referência cruzada mudar, são duas execuções do \pdflatex. Caso alguma citação mude, será igual à compilação.
+
+Isso deixa clara a diferença de tempos de compilação e re"-compilação, conforme registrados na Tabela~\ref{tab:time}. A influência do pacote \texttt{microtype} também pode ser vista nos tempos, adicionando os seguintes comentários: sem o pacote \texttt{microtype} a compilação do \ac{pdf} finaliza com 1 \eng{bad box}; enquanto a compilação com o \texttt{microtype} finaliza sem nenhum \eng{bad box}. As \eng{bad boxes} deverão ser resolvidas manualmente pelo autor, quando for produzir sua cópia final. Isso normalmente exige alguma re"-estruturação do texto. O \texttt{microtype}, por alterar as quebrar de linha pode, em alguns casos, alterar o número de páginas do documento final. No caso do presente documento, isso não ocorreu.
+
+Em relação à conformidade com o padrão \ac{pdfa}, o software veraPDF (disponível em \url{verapdf.org}) foi utilizado para averiguar no \texttt{main.pdf} produzido. O teste com perfil de validação \ac{pdfa}-3u foi concluído com sucesso, sem um único ponto de falha.

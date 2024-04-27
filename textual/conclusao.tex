@@ -1,3 +1,9 @@
 \chapter{Conclusão}
 
-Escreva aqui a conclusão de seu trabalho.
+O presente trabalho implementa corretamente as normas \ac{abnt} e regulamentos institucionais da \ac{utfpr} para a elaboração de \ac{tcc} no curso de Engenharia Eletrônica. A classe \texttt{coele-cm.cls} é pequena o bastante para promover um simples esforço de manutenção, na eventualidade de alteração das normas.
+
+Experimentos feitos pela comunidade demonstram que muito do tempo de produção de um \ac{pdf} pelo \pdftex\ é gasto na biblioteca \texttt{zlib}, responsável pela compressão dos objetos no \eng{stream} de dados dentro do contêiner \ac{pdf}. Diretivas do \pdftex\ podem ser exploradas para tentar trazer o tempo de compilação para um valor mais baixo, ao custo de um \ac{pdf} maior. Há também de se averiguar a conformidade desse resultado com o padrão \ac{pdfa}.
+
+Além do nível de compressão no \ac{pdf}, há outras opções que serão averiguadas para otimizar a classe: passar o carregamento e utilização do \texttt{microtype} como uma opção da classe, conferindo flexibilidade aos autores; compilar a classe como um formato \LaTeX, reduzindo o tempo total de compilação apenas ao trabalho e compor as páginas do \ac{pdf}.
+
+Finalmente, também como um trabalho futuro, re"-escrever a classe como uma fonte documentada do \LaTeX\ (um arquivo \enquote{.dtx}). Isso permitirá uma melhor capacidade de expandir e manter a classe, pela documentação pormenorizada das linhas de código.

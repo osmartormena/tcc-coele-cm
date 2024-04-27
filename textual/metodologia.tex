@@ -1,3 +1,105 @@
 \chapter{Metodologia}
 
-Escreva aqui a metodologia do seu trabalho.
+Este capítulo está organizado em duas seções: instalação do TeX Live e \eng{download} do modelo em uma pasta de trabalho, ou alternativamente, o uso do modelo no Overleaf; e as principais dicas para começar a escrever usando o \LaTeX.
+
+\section{Instalação local}
+
+O TeX Live pode ser obtido em \url{www.tug.org}, onde a versão 2024 já está disponível. Uma instalação completa do TeX Live ocupa vários gigabytes e é absolutamente desnecessária. Sua instalação é organizada, de forma mais macroscópica, em \enquote{esquemas}. A instalação do \texttt{scheme"-basic} inclui duas \enquote{coleções}: \texttt{collection"-basic} e \texttt{collection"-latex}.
+
+A \enquote{coleção básica} compreende 40 pacotes básicos do \TeX. Dentre eles, de fundamental importância para a presente demanda é o \pdftex. Já a \enquote{coleção \LaTeX} compreende outros 58 pacotes. Além do \LaTeX\ propriamente dito, essa coleção também traz, dentre outros, o pacote \babel.
+
+Outros 20 pacotes adicionais são necessários na implementação da classe deste modelo, são eles:
+\texttt{acro} (lista de acrônimos);
+\texttt{babel-portuges} (suporte do babel para português);
+\texttt{biber} (sucessor do bibtex para o biblatex);
+\texttt{biblatex} (bibliografias no \LaTeX);
+\texttt{biblatex-abnt} (normas \ac{abnt} para citações e referências);
+\texttt{booktabs} (tabelas com melhor formatação\footnote{De acordo com \cite{ibge1993}, conforme recomendado pelas normas \ac{abnt}.});
+\texttt{csquotes} (aspas inteligentes\footnote{Recomendado pelo \texttt{biblatex}.});
+\texttt{etoolbox} (ferramentas do e-\TeX para \LaTeX);
+\texttt{everyshi};
+\texttt{hyphen-portuguese} (hifenização em português);
+\texttt{latexmk} (automação do \LaTeX);
+\texttt{lm} (fontes Latin Modern);
+\memoir\ (classe \memoir);
+\texttt{microtype} (ajustes tipográficos);
+\texttt{pdfx} (suporte para produção de \ac{pdfa});
+\texttt{textcase} (controle de capitalização do texto);
+\texttt{translations} (Internacionalização dos pacotes para \LaTeXe);
+\texttt{xcolor} (Extensão das cores do \LaTeX\footnote{Dependência do \texttt{pdfx}.});
+\texttt{xmpincl} (inclusão de metadados no \ac{pdfa});
+\texttt{xpatch} (extensão do \texttt{etoolbox}).
+
+Esses pacotes podem ser instalados individualmente. Para simples referência, isso pode ser feito através dos comandos:
+\begin{verbatim}
+tlmgr install acro babel-portuges biber biblatex biblatex-abnt booktabs
+	csquotes etoolbox everyshi hyphen-portuguese latexmk lm memoir microtype
+	pdfx textcase translations xcolor xmpincl xpatch
+texhash
+tlmgr path add
+\end{verbatim}
+Resultado é uma instalação plenamente capaz do TeX Live, ocupando apenas\footnote{Este valor pode ser dependente do sistema operacional.}\footnote{Durante a produção da Tabela~\ref{tab:time}, foi necessário instalar um pacote adicional, o \texttt{multirow}, que adicionou 9~kylobytes à instalação.} 283~megabytes!
+
+Dentre esses pacotes, apenas dois não são \emph{estritamente} necessários para o cumprimento das normas \ac{abnt} e regimentos da \ac{utfpr}: o \texttt{microtype} e o \texttt{latexmk}. O racional para sua adição ao modelo é justificado por:
+\begin{description}
+	\item[\texttt{microtype}] --- ajuste sofisticado de espaçamento tipográfico para o \pdftex, resultando em menor número de hifenizações no corpo do texto e de \eng{bad boxes}\footnote{O \LaTeX\ tenta produzir texto justificado com espaçamento adequado entre as palavras. Por vezes o algoritmo falha, produzindo muito espaçamento entre as palavras ou fazendo o texto adentrar a margem.};
+	\item[\texttt{latexmk}] --- o \pdftex e \texttt{biber} podem precisar ser executados múltiplas vezes para resolver todas as referências internas e produzir uma cópia final do documento processado. O \texttt{latexmk} é um \eng{script} Perl especializado que automatiza esse processo.
+\end{description}
+
+A usabilidade proporcionada pelo \texttt{latexmk} custa apenas 525~kilobytes, sendo um opcional completamente razoável. Já a adição do \texttt{microtype} não se mede no espaço ocupado (apenas~464 kilobytes), mas sim no seu impacto no tempo de compilação, como será visto no capítulo~\ref{cap:resultados}.
+
+\section{Overleaf}
+
+Conforme apontado pela seção anterior, a instalação do TeX Live está longe de ser um fator crítico para a utilização do \LaTeX\ na escrita do \ac{tcc}. No entanto, há uma razão legítima para o uso do Overleaf: ele permite a colaboração simultânea de múltiplos autores. Isso pode ocorrer, especialmente, entre o orientado e o orientador, com correções podendo ser apontadas em tempo real.
+
+Infelizmente a versão gratuita do Overleaf já não oferece o serviço de versionamento do documento, onde o autor poderia congelar versões do documento como um \eng{backup}, antes de uma mudança significativa na estrutura do documento, permitindo um simples \eng{rollback} no caso de resultados insatisfatórios.
+
+De toda forma, o autor que deseje iniciar seu \ac{tcc} no Overleaf basta acessar o sítio \url{www.overleaf.com}, criar sua conta ou inserir suas credenciais de acesso e iniciar um novo projeto.
+
+\section{Usando o \LaTeX}
+
+O modelo completo (incluindo o presente conteúdo) está disponível em \url{https://github.com/osmartormena/coele-cm}. De lá é possível fazer o \eng{download} do projeto completo em um arquivo \enquote{.zip}, ou, para os familiares com o GitHub, clonar o repositório. A partir daí, é possível seguir dois caminhos distintos:
+\begin{itemize}
+	\item Quem for trabalhar com uma instalação local do TeX Live, pode expandir o arquivo \enquote{.zip} na pasta onde vai manter seus arquivos de \ac{tcc};
+	\item Quem for trabalhar no Overleaf, possui duas opções:
+		\begin{itemize}
+			\item Fazer o \eng{upload} manual do projeto no Overleaf;
+			\item Abrir o projeto a partir de seu clone, na sua própria conta no GitHub.
+		\end{itemize}
+\end{itemize}
+
+Uma vez os arquivos fonte todos em seu devido lugar, os autores têm uma segunda escolha a ser feita.
+
+\subsection{Editores \LaTeX}
+
+Arquivos \enquote{.tex} são simples arquivos de texto, sem formatação, podendo ser editados até no infame Bloco de Notas, se necessário. Porém, todos os autores (iniciantes ou experientes) se beneficiam de um editor que \enquote{entende} \LaTeX.
+
+Quem estiver trabalhando com o Overleaf, um editor já se encontra disponível na interface. Em uma instalação local, o autor precisará instalar um editor da sua preferência. Para quem não tiver, recomendo o TeXworks (disponível em \url{https://www.tug.org/texworks/}). Dentre suas características mais importantes, destaco: multi"-plataforma; robusto; e minimalista. Caso seu sistema operacional seja Windows, o TeX Live distribui o TeXworks através da coleção \texttt{collection-texworks}.
+
+\subsection{Editando o código"-fonte}
+
+Agora que toda a preparação prévia está finalizada, podemos (finalmente) começar a tarefa de transformar o texto do modelo no texto do seu \ac{tcc}. O arquivo \texttt{main.tex} é o arquivo principal do modelo que, se compilado, produz \texttt{main.pdf} como resultado. Esse arquivo não possui muito conteúdo, no entanto. A única coisa que os autores precisam editar neste arquivo são os metadados declarados logo no seu início. Esses metadados são parte fundamental do formato \ac{pdfa}.
+
+Dando sequência, o autor deve escolher duas opções da classe \texttt{coele-cm.cls}, na chamada do \verb|\documentclass|: o tipo de licenciamento Creative Commons; o estilo de citação e referências \ac{abnt}, numérico ou autor"-data. Contrária à crença popular, o modelo numérico não só atende às normas \ac{abnt}, como, na verdade, é recomendado por elas, em detrimento do sistema autor"-data. O arquivo \texttt{coele-cm.cls} \emph{não deve ser editado} pelos autores.
+
+Na subpasta \texttt{preambulo} há dois arquivos: \texttt{metadados.tex} e \texttt{preambulo.tex}. Ambos devem ser editados: o primeiro traz dados importantes sobre o trabalho; o segundo carrega pacotes e definições adicionais, específicas do trabalho sendo escrito. Por exemplo, no presente trabalho, o pacote \texttt{mflogo}, instalado com a \texttt{collection-basic}, é utilizado para prover o comando \verb|\MF| que produz o logo \MF. É (extremamente) improvável que os autores precisem deste pacote, de maneira que ele pode ser removido. Porém, outros pacotes podem ser necessários.
+
+Por exemplo, embora as formatações básicas do \LaTeX\ sejam suficientes para descrição de equações, tanto em linha, como $y(t)=\sin(x(t))$, como num \eng{display}, como
+\[y(t)=\frac{\mathrm{d}x(t)}{\mathrm{d}t},\]
+ou até, quando necessário, para equações numeradas, por serem referenciadas diretamente no texto, como a Eq.~(\ref{eq:conv})
+\begin{equation}\label{eq:conv}
+	y(t)=\int_{-\infty}^\infty x(\tau)h(t-\tau)\,\mathrm{d}\tau.
+\end{equation}
+Por vezes, algo ainda mais sofisticado pode ser necessário. O pacote \texttt{amsmath} (parte da \texttt{collection-latex}), pode ser carregado para acesso à interfaces extras para tipografia matemática. Caso alguns símbolos matemáticos extras sejam necessários, o pacote \texttt{amsfonts} (parte da \texttt{collection-basic}) pode ser carregado.
+
+A mesma ideia se aplica para todos os arquivos \enquote{.tex} nas subpastas \texttt{pretextual}, \texttt{textual} e \texttt{postextual}. Elementos que não sejam obrigatórios: Dedicatória; Agradecimentos; Epígrafe; Lista de figuras; Lista de tabelas; Lista de abreviaturas e siglas; Apêndices; ou Anexos; podem ser omitidos comentando (adicionando um \verb|%| no iní:cio) a linha. Capítulos adicionais de Apêndices ou Anexos podem ser incluídos, conforme feito para os disponíveis no modelo.
+
+\section{Lista de referências}
+
+Na subpasta \texttt{postextual} há um arquivo chamado \texttt{refs.bib}. Esse arquivo contém o banco de dados das referências do trabalho, a partir do qual o \texttt{biblatex} irá realizar as formatações necessárias das citações e lista de referências, conforme as normas \ac{abnt}. Embora esse arquivo possa ser editado diretamente, recomenda"-se o uso de um gerenciador, como o Zotero (disponível em \url{www.zotero.org})\footnote{Também é possível utilizar o Mendeley (\url{www.mendeley.com}), porém ele ficou \enquote{estranho} depois que a Elsevier assumiu seu controle.}.
+
+O uso do gerenciador permite que a base de dados seja populada, a partir dos próprios metadados de um \ac{pdf} adicionado (lembrando de conferir), ou a partir do \ac{doi}. O número \ac{doi} é uma fonte mais confiável dos metadados, porém nem todas as referências podem possuí"-lo.
+
+Embora o pacote \texttt{biblatex-abnt} seja amplamente reconhecido pela comunidade de usuários como uma implementação fidedigna da: \citetitle{NBR6023}; e da \citetitle{NBR10520}; por se tratar de um trabalho voluntário, distribuído gratuita e livremente, há alguns problemas. As distribuições \TeX, como o TeX Live, buscam seus pacotes na \ac{ctan}. A versão do \texttt{biblatex-abnt} disponível na \ac{ctan} é novembro de 2018, enquanto a versão de desenvolvimento no repositório de origem (\url{https://github.com/abntex/biblatex-abnt}) é de julho de 2023. Em uma conversa com o mantenedor (\eng{issue \#126}), ele manifestou não dispor do tempo para fazer todos os testes e remeter uma atualização no \ac{ctan}.
+
+Em vista disso, lancei mão do seguinte \eng{workaround}: os arquivos \texttt{abnt.bbx}, \texttt{abnt.cbx}, \texttt{abnt-numeric.bbx}, \texttt{abnt-numeric.cbx}, \texttt{brazil-abnt.lbx} e \texttt{brazilian-abnt.lbx} foram copiados do repositório \url{https://github.com/abntex/biblatex-abnt} para a pasta raiz deste projeto. Assim, o \LaTeX\ usa esses arquivos atualizados, ao invés de usar os arquivos (com alguns \eng{bugs}) disponíveis no \ac{ctan}. Esses arquivos também \emph{não devem ser editados}.

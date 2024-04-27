@@ -1,6 +1,6 @@
 \chapter{Fundamentação teórica}
 
-Neste capítulo serão definidos vários aspectos do \LaTeX, normas \ac{abnt} e normas institucionais.
+Neste capítulo serão definidos vários aspectos do \LaTeX, normas \ac{abnt} e normas institucionais. O leitor interessado pode buscar expandir os conceitos aqui apresentados através das referências.
 
 \section{\LaTeX}
 
@@ -10,15 +10,13 @@ Neste capítulo serão definidos vários aspectos do \LaTeX, normas \ac{abnt} e 
 
 Donald Ervin Knuth\footnote{Célebre cientista da computação e matemático norte"-americano.} criou o \TeX\ porque desejava uma ferramenta adequada para a publicação de seus próprios livros. Knuth também criou o programa \MF\ para criação de fontes para o \TeX. Com o \MF, Knuth criou a família Computer Modern Roman de fontes, a fonte padrão do \TeX. O \TeX\ é uma linguagem e aplicação de tipografia, como sugere o arranjo estilizado das letras de seu próprio nome \cites{Knuth1986a,Knuth1986b,Knuth1986c,Knuth1986d,Knuth1986e}.
 
-A primeira versão do \TeX\ foi lançada em 1978. Sua versão atual, publicada em fevereiro de 2021, é 3.141592653. \TeX\ é software livre, com número de versão que converge para o número \(\pi\), ganhando uma casa decimal a cada atualização. Knuth já manifestou o desejo de congelar o \TeX\ após sua morte, promovendo quaisquer \eng{bugs\/} restantes à \eng{features}.
+A primeira versão do \TeX\ foi lançada em 1978. Sua versão atual, publicada em fevereiro de 2021, é 3.141592653. \TeX\ é software livre, com número de versão que converge para o número \(\pi\), ganhando uma casa decimal a cada atualização. Knuth já manifestou o desejo de congelar o \TeX\ após sua morte, promovendo quaisquer \eng{bugs} restantes à \eng{features}.
 
-O \TeX\ é composto por 325 comandos primitivos. Esses comandos são como uma linguagem \eng{assembly\/} para diagramação de textos. A escrita de um documento apenas com esses primitivos não é uma experiência agradável. Porém, uma das grandes vantagens do \TeX\ é sua capacidade de expansão, por meio de macros. O próprio Knuth desenvolveu um formato, chamado de plain \TeX\, onde são definidos cerca de 600 comandos, significativamente mais úteis para autores. O plain \TeX\ é tido como a linguagem básica do \TeX.
+O \TeX\ é composto por 325 comandos primitivos. Esses comandos são como uma linguagem \eng{assembly} para diagramação de textos. A escrita de um documento apenas com esses primitivos não é uma experiência agradável. Porém, uma das grandes vantagens do \TeX\ é sua capacidade de expansão, por meio de macros. O próprio Knuth desenvolveu um formato, chamado de plain \TeX\, onde são definidos cerca de 600 comandos, significativamente mais úteis para autores. O plain \TeX\ é tido como a linguagem básica do \TeX.
 
-É importante distinguir \TeX: a linguagem de tipografia; e \tex: o programa. O programa \tex\ toma um arquivo de texto não"-formatado de codificação \ac{ascii}. É comum o uso da extensão \enquote{.tex}, constituído pelo conteúdo textual e diretivas na linguagem \TeX\ para sua correta diagramação, produzindo, finalmente, um arquivo \ac{dvi}.
+É importante distinguir \TeX: a linguagem de tipografia; e \tex: o programa. O programa \tex\ toma um arquivo de texto não"-formatado de codificação \ac{ascii}, comumente com a extensão \enquote{.tex}. O arquivo \enquote{.tex} é constituído pelo conteúdo textual e diretivas na linguagem \TeX\ para sua correta diagramação, produzindo, finalmente, um arquivo \ac{dvi}.
 
-É raro o leitor que saiba o quê é um arquivo \ac{dvi}. Há muito o \ac{pdf} se tornou um padrão \lat{de facto\/} para documentos textuais digitais. A própria escrita do TCC, objeto de motivação deste documento, deve ser submetido à biblioteca no formato \ac{pdf}. Há também de se considerar que tanto o \tex\ quanto o \TeX\ foram desenvolvidos tendo a língua inglesa em mente.
-
-Dentre as várias extensões criadas para o \TeX, destaca-se o pdf\TeX. Como o nome sugere, o pdf\TeX é uma extensão do \TeX\ com suporte nativo para criação de \ac{pdf}. A aplicação \pdftex\ é o compilador padrão contemporâneo \cite{Thanh2024}.
+É raro o leitor que saiba o quê é um arquivo \ac{dvi}. Há muito o \ac{pdf} se tornou um padrão \lat{de facto} para documentos textuais digitais. Há também de se considerar que tanto o \tex\ quanto o \TeX\ foram desenvolvidos tendo a língua inglesa em mente. Dentre as várias extensões criadas para o \TeX, destaca-se o pdf\TeX. Como o nome sugere, o pdf\TeX é uma extensão do \TeX\ com suporte nativo para criação de \ac{pdf}. A aplicação \pdftex\ é o compilador padrão contemporâneo \cite{Thanh2024}.
 
 \subsection{\LaTeX\ de fato}
 
@@ -28,7 +26,7 @@ Com o \LaTeX, os autores podem se concentrar apenas no conteúdo de seu texto, d
 
 Há uma ampla documentação online acerca do \LaTeX, porém a referência autoritativa é tida como o trabalho de Frank Mittelbach, com o \citetitle{Mittelbach2023} \cite{Mittelbach2023}. O formato \LaTeX\ resolve muito das limitações do \TeX, como: suporte mais adequado a textos em outra língua que a inglesa; suporte ao arquivo de entrada \enquote{.tex} codificado em Unicode\footnote{Com \ac{utf8} se tornando o padrão em 2018.}.
 
-O comando comumente usado para processar um arquivo de entrada \enquote{.tex} em um \ac{pdf} (sublimemente formatado) é o \pdflatex. Esse comando consiste apenas em um \eng{alias\/} do \pdftex, com a opção de carregar o formato \LaTeX. Existem mais de 6500 pacotes de estilo expandindo a funcionalidade do \LaTeX. Embora a grande maioria seja altamente especializada e, consequentemente, conhecidos apenas por um nicho da comunidade de usuários, alguns são notórios por sua ubiquidade, sendo considerados \enquote{essenciais} pela maioria dos autores.
+O comando comumente usado para processar um arquivo de entrada \enquote{.tex} em um \ac{pdf} (sublimemente formatado) é o \pdflatex. Esse comando consiste apenas em um \eng{alias} do \pdftex, com a opção de carregar o formato \LaTeX. Existem mais de 6500 pacotes de estilo expandindo a funcionalidade do \LaTeX. Embora a grande maioria seja altamente especializada e, consequentemente, conhecidos apenas por um nicho da comunidade de usuários, alguns são notórios por sua ubiquidade, sendo considerados \enquote{essenciais} pela maioria dos autores.
 
 \subsection{Distribuições \TeX}
 
@@ -85,7 +83,7 @@ Apesar da má fama, as normas \ac{abnt} são, em sua grande maioria, simples e r
 
 As normas da UTFPR estão expressas em três documentos institucionais:
 \begin{description}
-	\item[\citetitle{cogep2021}] --- Dispõe sobre a política de licenciamento das versões finais dos Trabalhos de Conclusão de Curso da Graduação e da Pós"-Graduação \lat{Lato\/} e \lat{Stricto Sensu\/} (dissertações e teses), bem como dos produtos educacionais e tecnológicos a elas vinculados, produzidos no âmbito da UTFPR \cite{cogep2021};
+	\item[\citetitle{cogep2021}] --- Dispõe sobre a política de licenciamento das versões finais dos Trabalhos de Conclusão de Curso da Graduação e da Pós"-Graduação \lat{Lato} e \lat{Stricto Sensu} (dissertações e teses), bem como dos produtos educacionais e tecnológicos a elas vinculados, produzidos no âmbito da UTFPR \cite{cogep2021};
 	\item[\citetitle{prograd2021}] --- Estabelece normas e procedimentos operacionais para o depósito de versões finais de Trabalhos de Conclusão de Cursos de Graduação da UTFPR nas Bibliotecas para a disponibilização no Repositório Institucional da UTFPR \cite{prograd2021}.
 \end{description}
 

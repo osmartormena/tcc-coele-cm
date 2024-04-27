@@ -31,6 +31,9 @@
 	\renewcommand{\listfigurename}{Lista de figuras}
 	\renewcommand{\listtablename}{Lista de tabelas}
 }
+\DeclareRobustCommand\sin{\mathop{\operator@font sen}\nolimits}
+\DeclareRobustCommand\arcsin{\mathop{\operator@font arcsen}\nolimits}
+\DeclareRobustCommand\sinh{\mathop{\operator@font senh}\nolimits}
 %---
 
 %---
@@ -139,11 +142,12 @@
 
 % ---
 % Notas de rodapé (5.2.1 NBR 14724:2011)
+\feetbelowfloat
 \renewcommand{\foottextfont}{\smallfont}
 \setlength{\footmarkwidth}{1.2em}
 \setlength{\footmarksep}{0em}
 \footmarkstyle{\smallfont{\textsuperscript{#1}}\hfill}
-\renewcommand*{\footnoterule}{\hrule width 5cm\vspace{\onelineskip}}
+\renewcommand*{\footnoterule}{\kern -0.2pt\hrule width 5cm\kern-0.2pt \bigskip}
 \setfootins{\onelineskip}{\onelineskip}
 % ---
 
@@ -223,6 +227,7 @@
 % Figuras e tabelas (5.8 e 5.9 NBR 15724:2011)
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
 \setfloatadjustment{figure}{\centering}
 \setfloatadjustment{table}{\smallfont\centering}
 \setfloatlocations{figure}{htbp}
@@ -311,9 +316,11 @@
 \cftinsertcode{At}{%
 	\renewcommand*{\cftappendixname}{\enclname~}%
 }
+\AddToHook{cmd/tableofcontents*/end}{\pagestyle{empty}}
 \newcommand{\printtoc}{%
 	\tableofcontents*%
 	\thispagestyle{empty}%
+	\clearpage%
 }
 %---
 
