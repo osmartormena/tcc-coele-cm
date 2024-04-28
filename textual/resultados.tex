@@ -18,18 +18,20 @@ Um último detalhe relevante para o tempo de compilação, especialmente trabalh
 	\begin{tabular}{r c c c c}\toprule
 		\multirow{2}{*}{Plataforma}	&	\multicolumn{2}{c}{Com \texttt{microtype}}	&	\multicolumn{2}{c}{Sem \texttt{microtype}}\\
 								&	Compilação	& Re-compilação	& Compilação	& Re-compilação\\\midrule
-		Local	&	s	&	6,8 s	&	s	&	6,2 s\\
-		Overleaf	&	s	&	s	&	s	&	s\\\bottomrule
+		Local	&	37 s	&	6,8 s	&	33 s	&	6,2 s\\
+		Overleaf	&	20 s	&	8,8 s	&	20 s	&	8,0 s\\\bottomrule
 	\end{tabular}
 	\legend{Fonte~---~Autoria própria.}
 \end{table}
 
 A plataforma local é um MacBook Pro (Retina, 13-inch, Early 2015): com processador 2,7 GHz Dual-Core Intel Core i5; memória de 8 GB 1867 MHz DDR3; placa gráfica Intel Iris Graphics 6100 1536 MB; com sistema operacional macOS Monterey (12.7.4). Uma versão atualizada do TeX Live 2024 foi instalada.
 
-A plataforma Overleaf ainda não oferece o TeX Live 2024, sendo necessárias poucas modificações na classe para rodar no TeX Live 2023. O tempo limite de 20~s para a compilação do \ac{pdf} na conta gratuita será desafiadora de atingir.
+A plataforma Overleaf ainda não oferece o TeX Live 2024, sendo necessárias poucas modificações na classe para rodar no TeX Live 2023. O tempo limite de 20~s para a compilação do \ac{pdf} na conta gratuita será desafiadora de atingir, haja visto que a compilação do presente documento, menor que um \ac{tcc} típico, chegou ao tempo limite.
 
 A compilação exige rodar o \pdflatex\ uma vez, seguido de uma execução do \texttt{biber} e, finalmente, duas execuções consecutivas do \pdflatex. Isso é feito automaticamente pelo \texttt{latexmk}. Assim, todos os arquivos de suporte para produção da cópia final são populados e ficam disponíveis. A re"-compilação exige, normalmente, apenas uma execução do \pdflatex. No caso de alguma referência cruzada mudar, são duas execuções do \pdflatex. Caso alguma citação mude, será igual à compilação.
 
-Isso deixa clara a diferença de tempos de compilação e re"-compilação, conforme registrados na Tabela~\ref{tab:time}. A influência do pacote \texttt{microtype} também pode ser vista nos tempos, adicionando os seguintes comentários: sem o pacote \texttt{microtype} a compilação do \ac{pdf} finaliza com 1 \eng{bad box}; enquanto a compilação com o \texttt{microtype} finaliza sem nenhum \eng{bad box}. As \eng{bad boxes} deverão ser resolvidas manualmente pelo autor, quando for produzir sua cópia final. Isso normalmente exige alguma re"-estruturação do texto. O \texttt{microtype}, por alterar as quebrar de linha pode, em alguns casos, alterar o número de páginas do documento final. No caso do presente documento, isso não ocorreu.
+Isso deixa clara a diferença de tempos de compilação e re"-compilação, conforme registrados na Tabela~\ref{tab:time}. A influência do pacote \texttt{microtype} também pode ser vista nos tempos, adicionando os seguintes comentários: sem o pacote \texttt{microtype} a compilação do \ac{pdf} finaliza com 1 \eng{bad box}; enquanto a compilação com o \texttt{microtype} finaliza sem nenhum \eng{bad box}. As \eng{bad boxes} deverão ser resolvidas manualmente pelo autor, quando for produzir sua cópia final. Isso normalmente exige alguma re"-estruturação do texto. O \texttt{microtype}, por alterar as quebrar de linha pode, em alguns casos, alterar o número de páginas do documento final. No caso do presente documento, isso não ocorreu. De toda forma, o \eng{overhead} do \texttt{microtype} fica abaixo de 10\%. Ele é significativo, mas não resolve o problema do tempo de compilação no Overleaf.
+
+Os tempos de re"-compilação locais são menores que os do Overleaf, o que é esperado considerando a natureza do experimento e as plataformas envolvidas. Porém, observa"-se uma significativa discrepância nos tempos de compilação. Espera"-se que o Overleaf utilize o \texttt{latexmk} de uma maneira otimizada. Uma rápida análise da documentação do \texttt{latexmk} revela que algumas otimizações podem ser feitas para melhorar os tempos de compilação na plataforma local.
 
 Em relação à conformidade com o padrão \ac{pdfa}, o software veraPDF (disponível em \url{verapdf.org}) foi utilizado para averiguar no \texttt{main.pdf} produzido. O teste com perfil de validação \ac{pdfa}-3u foi concluído com sucesso, sem um único ponto de falha.

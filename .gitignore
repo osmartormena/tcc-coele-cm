@@ -9,6 +9,7 @@
 *.log
 *.lot
 *.out
+main.pdf
 *.run.xml
 *.synctex.gz
 *.tex.latexmain
