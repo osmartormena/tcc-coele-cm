@@ -1,6 +1,6 @@
 # coele-cm
 
-##Modelo de TCC no LaTeX
+## Modelo de TCC no LaTeX
 
 O presente projeto oferece um modelo de TCC para os alunos de Engenharia Eletrônica da UTFPR campus Campo Mourão. Os autores devem editar todos os arquivos TEX deste projeto, alterando o conteúdo presente do modelo para o conteúdo de suas monografias.
 
