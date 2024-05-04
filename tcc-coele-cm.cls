@@ -1,16 +1,19 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}[2023-11-01]
-\ProvidesClass{coele-cm}[2024-04-01 COELE-CM Class]
-\LoadClass[a4paper,12pt,oneside]{memoir}[2024-01-26]
+\ProvidesClass{tcc-coele-cm}[2024-04-01 COELE-CM TCC Class]
+\LoadClass[%
+	a4paper,				% (5.1 NBR 14724:2011)
+	12pt,						% (5.1 NBR 14724:2011)
+	extrafontsizes,	% usa Latin Modern T1
+	oneside					% impressão apenas em anverso
+]{memoir}[2024-01-26]
 
 %-----------------------------------------------------------------
 % CARREGA PACOTES E MODIFICA A CLASSE MEMOIR
 %-----------------------------------------------------------------
 
 \RequirePackage[english,brazil]{babel}	% texto multilingual
-\RequirePackage{lmodern}								% fonte Latin Modern Roman
-\RequirePackage[T1]{fontenc}						% permite a hifenização de palavras acentuadas
 \RequirePackage{microtype}							% melhora a quebra de linhas
 \RequirePackage{graphicx}								% inclusão de figuras
 \RequirePackage{csquotes}								% recomendado pelo 'biblatex'
@@ -127,12 +130,20 @@
 % Margens (5.1 NBR 14724:2011)
 \setlrmarginsandblock{3cm}{2cm}{*}
 \setulmarginsandblock{3cm}{2cm}{*}
+\setheadfoot{14.5pt}{0pt}	% nada no rodapé
+% Notas de rodapé (5.2.1 NBR 14724:2011)
+\setfootins{\onelineskip}{\onelineskip}
 \checkandfixthelayout
 % ---
 
 %---
 % Fonte reduzida uniforme (5.1 NBR 14724:2011)
-\newcommand{\smallfont}{\footnotesize}
+\newcommand{\smallfont}{\footnotesize}				% 10pt
+% Outros tamanhos de fonte
+\newcommand{\sssectionfont}{\sffamily\large}	% 14pt
+\newcommand{\ssectionfont}{\sffamily\Large}		% 17pt
+\newcommand{\sectionfont}{\sffamily\LARGE}		% 20pt
+\newcommand{\chapterfont}{\sffamily\huge}			% 25pt 
 %---
 
 % ---
@@ -148,79 +159,93 @@
 \setlength{\footmarksep}{0em}
 \footmarkstyle{\smallfont{\textsuperscript{#1}}\hfill}
 \renewcommand*{\footnoterule}{\kern -0.2pt\hrule width 5cm\kern-0.2pt \bigskip}
-\setfootins{\onelineskip}{\onelineskip}
 % ---
 
 %---
 % Indicativos de seção (5.2.2 NBR 14724:2011)
 \setsecnumdepth{subsubsection}
-\newcommand{\chapterfont}{\sffamily\Huge}
-\makechapterstyle{utfpr}{%
-	\renewcommand{\chapnumfont}{\chapterfont}%
-	\renewcommand{\chaptitlefont}{\chapterfont}%
+\makechapterstyle{frontback}{%
 	\renewcommand{\chapterheadstart}{}%
 	\renewcommand{\printchaptername}{}%
 	\renewcommand{\chapternamenum}{}%
-	\renewcommand{\afterchapternum}{\quad}%
-	\renewcommand{\afterchapskip}{\onelineskip}
-}
-\makechapterstyle{utfprprepos}{%
+	\renewcommand{\printchapternum}{}%
+	\renewcommand{\afterchapternum}{~}%
+	\renewcommand{\afterchaptertitle}{\par\nobreak\vskip\afterchapskip}%
+	\renewcommand{\chapnamefont}{}%
 	\renewcommand{\chapnumfont}{}%
 	\renewcommand{\chaptitlefont}{\centering\chapterfont}%
+	\setlength{\afterchapskip}{18pt}%
+}
+\makechapterstyle{main}{%
 	\renewcommand{\chapterheadstart}{}%
 	\renewcommand{\printchaptername}{}%
 	\renewcommand{\chapternamenum}{}%
-	\renewcommand{\afterchapternum}{}%
-	\renewcommand{\afterchapskip}{\onelineskip}
-}
-\makechapterstyle{utfprapp}{%
+	\renewcommand{\printchapternum}{\chapnumfont\thechapter}%
+	\renewcommand{\afterchapternum}{~}%
+	\renewcommand{\printchapternonum}{}%
+	\renewcommand{\afterchaptertitle}{\par\nobreak\vskip\afterchapskip}%
+	\renewcommand{\chapnamefont}{}%
 	\renewcommand{\chapnumfont}{\chapterfont}%
-	\renewcommand{\chaptitlefont}{\centering\chapterfont}%
+	\renewcommand{\chaptitlefont}{\chapterfont}%
+	\setlength{\afterchapskip}{18pt}%
+}
+\setsecnumformat{\csname the#1\endcsname~}
+\setsecheadstyle{\sectionfont}
+\setsubsecheadstyle{\ssectionfont}
+\setsubsubsecheadstyle{\sssectionfont}
+\makechapterstyle{appatt}{%
 	\renewcommand{\chapterheadstart}{}%
-	\renewcommand{\printchaptername}{\chapterfont\appendixname}%
-	\renewcommand{\chapternamenum}{~}%
-	\renewcommand{\afterchapternum}{~---~}%
-	\renewcommand{\afterchapskip}{\onelineskip}
+	\renewcommand{\printchaptername}{}%
+	\renewcommand{\chapternamenum}{}%
+	\renewcommand{\printchapternum}{}%
+	\renewcommand{\afterchapternum}{~}%
+	\renewcommand{\afterchaptertitle}{\par\nobreak\vskip\afterchapskip}%
+	\renewcommand{\chapnamefont}{}%
+	\renewcommand{\chapnumfont}{}%
+	\renewcommand{\chaptitlefont}{\centering\chapterfont%
+		\MakeTextUppercase{\@chapapp}~\thechapter~---~%
+	}%
+	\setlength{\afterchapskip}{18pt}%
 }
-\AddToHook{cmd/frontmatter/after}{\chapterstyle{utfprprepos}}
-\AddToHook{cmd/mainmatter/after}{\chapterstyle{utfpr}}
+\AddToHook{cmd/frontmatter/after}{\chapterstyle{frontback}}
+\AddToHook{cmd/mainmatter/after}{\chapterstyle{main}}
 \AddToHook{cmd/backmatter/after}{%
-	\cftinserthook{toc}{B}%
-	\chapterstyle{utfprprepos}%
-}
-\AddToHook{env/appendices/begin}{%
-	\chapterstyle{utfprapp}%
-	\cftinserthook{toc}{Ap}%
+	\chapterstyle{frontback}%
+	\cftinserthook{toc}{back}%
 }
 \AddToHook{cmd/appendix/after}{%
-	\renewcommand{\appendixname}{\enclname}%
-	\chapterstyle{utfprapp}%
-	\cftinserthook{toc}{At}%
+	\chapterstyle{appatt}%
+	\cftinserthook{toc}{app}%
 }
-\setsecheadstyle{\sffamily\Large}
-\setsubsecheadstyle{\sffamily\large}
-\setsubsubsecheadstyle{\sffamily\normalsize}
+\newcommand{\attachment}{%
+	\par
+	\setcounter{chapter}{0}%
+	\setcounter{section}{0}%
+	\gdef\@chapapp{\enclname}%
+	\gdef\thechapter{\@Alph\c@chapter}%
+	\anappendixtrue%
+	\chapterstyle{appatt}%
+	\cftinserthook{toc}{att}%
+}
 %---
 
 %---
 % Paginação (5.3 NBR 14724:2011)
-\makepagestyle{utfpr}
-\makeevenhead{utfpr}{}{}{\smallfont\thepage}
-\makeoddhead{utfpr}{}{}{\smallfont\thepage}
-\makeevenfoot{utfpr}{}{}{}
-\makeoddfoot{utfpr}{}{}{}
-\copypagestyle{chapter}{utfpr}
+\makepagestyle{abnt}
+\makeevenhead{abnt}{}{}{\smallfont\thepage}
+\makeoddhead{abnt}{}{}{\smallfont\thepage}
+\makeevenfoot{abnt}{}{}{}
+\makeoddfoot{abnt}{}{}{}
 \renewcommand\frontmatter{%
-	\clearpage%
 	\pagenumbering{arabic}%
 	\pagestyle{empty}%
+	\copypagestyle{chapter}{empty}%
 }
 \renewcommand\mainmatter{%
-	\pagestyle{utfpr}%
+	\copypagestyle{chapter}{abnt}%
+	\pagestyle{abnt}%
 }
-\renewcommand\backmatter{%
-	\pagestyle{utfpr}%
-}
+\renewcommand\backmatter{}
 %---
 
 %---
@@ -251,7 +276,7 @@
 	\begin{abstract}
 		\input{./pretextual/resumo}
 	\end{abstract}
-	\clearpage
+	\clearpage%
 }
 \newcommand{\printengabstract}{%
 	\begin{otherlanguage}{english}
@@ -259,7 +284,7 @@
 			\input{./pretextual/abstract}
 		\end{abstract}
 	\end{otherlanguage}
-	\clearpage
+	\clearpage%
 }
 %---
 
@@ -267,7 +292,6 @@
 % Lista de figuras (4.2.1.9 NBR 14724:2011)
 \newcommand{\printlof}{%
 	\listoffigures*%
-	\thispagestyle{empty}%
 	\clearpage%
 }
 %---
@@ -276,7 +300,6 @@
 % Lista de tabelas (4.2.1.10 NBR 14724:2011)
 \newcommand{\printlot}{%
 	\listoftables*%
-	\thispagestyle{empty}%
 	\clearpage%
 }
 %---
@@ -286,7 +309,6 @@
 \newcommand{\printloa}{%
 	\setlength\LTleft{0pt}
 	\printacronyms%
-	\thispagestyle{empty}%
 	\clearpage%
 }
 %---
@@ -307,19 +329,20 @@
 \renewcommand{\cftsubsubsectionfont}{\sffamily}
 \renewcommand{\cftsubsubsectionpagefont}{\sffamily}
 \cftsetindents{subsubsection}{0em}{4em}
-\cftinsertcode{B}{\setlength{\cftchapterindent}{4em}}
-\cftinsertcode{Ap}{%
+\cftinsertcode{back}{\setlength{\cftchapterindent}{4em}}
+\cftinsertcode{app}{%
 	\renewcommand*{\cftappendixname}{\appendixname~}%
 	\renewcommand*{\cftchapteraftersnum}{\hfil---}%
 	\renewcommand*{\cftchapteraftersnumb}{}%
 }
-\cftinsertcode{At}{%
+\cftinsertcode{att}{%
 	\renewcommand*{\cftappendixname}{\enclname~}%
+	\renewcommand*{\cftchapteraftersnum}{\hfil---}%
+	\renewcommand*{\cftchapteraftersnumb}{}%
 }
 \AddToHook{cmd/tableofcontents*/end}{\pagestyle{empty}}
 \newcommand{\printtoc}{%
 	\tableofcontents*%
-	\thispagestyle{empty}%
 	\clearpage%
 }
 %---
@@ -378,6 +401,7 @@
 	\end{center}%
 	\setcounter{page}{0}%
 	\thispagestyle{empty}%
+	\clearpage%
 }
 
 %-----------------------------------------------------------------
@@ -468,7 +492,6 @@
 %-----------------------------------------------------------------
 
 \NewDocumentCommand{\dedication}{}{%
-	\thispagestyle{empty}
 	\vspace*{\fill}
 	\begin{center}
 		\noindent\em%
@@ -484,7 +507,6 @@
 
 \NewDocumentCommand{\acknowledgment}{}{%
 	\chapter*{Agradecimentos}
-	\thispagestyle{empty}
 	\indent%
 	\input{./pretextual/agradecimentos}
 	\clearpage%
@@ -495,7 +517,6 @@
 %-----------------------------------------------------------------
 
 \NewDocumentCommand{\printepigraph}{}{%
-	\thispagestyle{empty}
 	\setlength{\epigraphrule}{0pt}
 	\epigraphtextposition{flushright}
 	\epigraphfontsize{\smallfont\em}
