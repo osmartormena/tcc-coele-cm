@@ -261,6 +261,7 @@
 \captiontitlefont{\smallfont}
 \captiondelim{~---~}
 \hangcaption
+\renewcommand*{\insertchapterspace}{}
 %---
 
 %---
