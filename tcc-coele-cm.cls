@@ -1,26 +1,28 @@
 %
 
-\NeedsTeXFormat{LaTeX2e}[2023-11-01]
-\ProvidesClass{tcc-coele-cm}[2024-04-01 COELE-CM TCC Class]
+\NeedsTeXFormat{LaTeX2e}[2024-11-01]
+\ProvidesClass{tcc-coele-cm}[2025-04-01 COELE-CM TCC Class]
+\RequirePackage{cmap}	% mapemaneto de caracteres para PDF "copiável"
 \LoadClass[%
-	a4paper,				% (5.1 NBR 14724:2011)
-	12pt,						% (5.1 NBR 14724:2011)
+	a4paper,		% (5.1 NBR 14724:2011)
+	12pt,			% (5.1 NBR 14724:2011)
 	extrafontsizes,	% usa Latin Modern T1
-	oneside					% impressão apenas em anverso
-]{memoir}[2024-01-26]
+	oneside			% impressão apenas em anverso
+]{memoir}[2025-03-10]
 
 %-----------------------------------------------------------------
 % CARREGA PACOTES E MODIFICA A CLASSE MEMOIR
 %-----------------------------------------------------------------
 
-\RequirePackage[english,brazil]{babel}	% texto multilingual
-\RequirePackage{microtype}							% melhora a quebra de linhas
-\RequirePackage{graphicx}								% inclusão de figuras
-\RequirePackage{csquotes}								% recomendado pelo 'biblatex'
-\RequirePackage{longtable}							% tabelas longas, exigido pelo 'acro'
-\RequirePackage{acro}										% acrônimos e siglas
-\RequirePackage{xcolor}									% suprime warning to 'hyperref'
-\RequirePackage[a-3u,pdf17]{pdfx}				% produz PDF/A
+\RequirePackage[english, brazil]{babel}	% texto multilingual
+\RequirePackage{microtype}				% melhora a quebra de linhas
+\RequirePackage{mathtools}				% expande as capacidades matemáticas
+\RequirePackage{graphicx}				% inclusão de figuras
+\RequirePackage{csquotes}				% recomendado pelo 'biblatex'
+\RequirePackage{longtable}				% tabelas longas, exigido pelo 'acro'
+\RequirePackage{acro}					% acrônimos e siglas
+\RequirePackage{xcolor}					% suprime warning to 'hyperref'
+\RequirePackage[a-3u, pdf17]{pdfx}		% produz PDF/A
 
 %---
 % Alterando \em e \emph{} (itálico já é usado em matemática e estrangeirismos): ênfase com \sl
@@ -34,9 +36,10 @@
 	\renewcommand{\listfigurename}{Lista de figuras}
 	\renewcommand{\listtablename}{Lista de tabelas}
 }
-\DeclareRobustCommand\sin{\mathop{\operator@font sen}\nolimits}
-\DeclareRobustCommand\arcsin{\mathop{\operator@font arcsen}\nolimits}
-\DeclareRobustCommand\sinh{\mathop{\operator@font senh}\nolimits}
+% Redefinições de operadores matemáticos
+\protected\def\arcsin{\qopname\relax o{arcsen}}
+\protected\def\sin{\qopname\relax o{sen}}
+\protected\def\sinh{\qopname\relax o{senh}}
 %---
 
 %---
@@ -109,7 +112,7 @@
 \DeclareOption{alf}{\PassOptionsToPackage{style=abnt}{biblatex}}
 \DeclareOption{num}{\PassOptionsToPackage{style=abnt-numeric}{biblatex}}
 \ProcessOptions\relax
-\RequirePackage{biblatex}					%
+\RequirePackage{biblatex}
 %---
 
 %-----------------------------------------------------------------
@@ -118,9 +121,17 @@
 
 % Ajusta fonte e hifenização para textos em inglês
 \NewDocumentCommand{\eng}{m}{\textit{\foreignlanguage{english}{#1}}}
+% Ajusta fonte e hifenização para textos em espanhol
+\NewDocumentCommand{\spa}{m}{\textit{\foreignlanguage{spanish}{#1}}}
+% Ajusta fonte e hifenização para textos em francês
+\NewDocumentCommand{\fre}{m}{\textit{\foreignlanguage{french}{#1}}}
+% Ajusta fonte e hifenização para textos em italiano
+\NewDocumentCommand{\ita}{m}{\textit{\foreignlanguage{italian}{#1}}}
+% Ajusta fonte e hifenização para textos em alemão
+\NewDocumentCommand{\ger}{m}{\textit{\foreignlanguage{german}{#1}}}
 % Ajusta fonte e hifenização para textos em latim
-\NewDocumentCommand{\lat}{m}{\textit{#1}}
-%\DeclareLanguageMapping{latin}{brazil}	% bug do 'biblatex'
+\NewDocumentCommand{\lat}{m}{\textit{\foreignlanguage{latin}{#1}}}
+\DeclareLanguageMapping{latin}{brazil}	% bug do 'biblatex'
 
 %-----------------------------------------------------------------
 % MODIFICAÇÕES GERAIS DE DIAGRAMAÇÃO
@@ -138,12 +149,12 @@
 
 %---
 % Fonte reduzida uniforme (5.1 NBR 14724:2011)
-\newcommand{\smallfont}{\footnotesize}				% 10pt
+\newcommand{\smallfont}{\footnotesize}			% 10pt
 % Outros tamanhos de fonte
 \newcommand{\sssectionfont}{\sffamily\large}	% 14pt
 \newcommand{\ssectionfont}{\sffamily\Large}		% 17pt
 \newcommand{\sectionfont}{\sffamily\LARGE}		% 20pt
-\newcommand{\chapterfont}{\sffamily\huge}			% 25pt 
+\newcommand{\chapterfont}{\sffamily\huge}		% 25pt 
 %---
 
 % ---
