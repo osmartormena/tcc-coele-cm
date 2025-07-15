@@ -9,10 +9,10 @@
 *.log
 *.lot
 *.out
-main.pdf
 *.run.xml
 *.synctex.gz
 *.tex.latexmain
 *.toc
 *.xmpdata
 *.xmpi
+main.pdf
