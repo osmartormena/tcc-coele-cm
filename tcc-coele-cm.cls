@@ -14,15 +14,15 @@
 % CARREGA PACOTES E MODIFICA A CLASSE MEMOIR
 %-----------------------------------------------------------------
 
-\RequirePackage[english, brazil]{babel}	% texto multilingual
-\RequirePackage{microtype}				% melhora a quebra de linhas
-\RequirePackage{mathtools}				% expande as capacidades matemáticas
-\RequirePackage{graphicx}				% inclusão de figuras
-\RequirePackage{csquotes}				% recomendado pelo 'biblatex'
-\RequirePackage{longtable}				% tabelas longas, exigido pelo 'acro'
-\RequirePackage{acro}					% acrônimos e siglas
-\RequirePackage{xcolor}					% suprime warning to 'hyperref'
-\RequirePackage[a-3u, pdf17]{pdfx}		% produz PDF/A
+\RequirePackage[english, brazilian]{babel}	% texto multilingual
+\RequirePackage{microtype}					% melhora a quebra de linhas
+\RequirePackage{mathtools}					% expande as capacidades matemáticas
+\RequirePackage{graphicx}					% inclusão de figuras
+\RequirePackage{csquotes}					% recomendado pelo 'biblatex'
+\RequirePackage{longtable}					% tabelas longas, exigido pelo 'acro'
+\RequirePackage{acro}						% acrônimos e siglas
+\RequirePackage{xcolor}						% suprime warning to 'hyperref'
+\RequirePackage[a-3u, pdf17]{pdfx}			% produz PDF/A
 
 %---
 % Alterando \em e \emph{} (itálico já é usado em matemática e estrangeirismos): ênfase com \sl
@@ -141,7 +141,7 @@
 % Margens (5.1 NBR 14724:2011)
 \setlrmarginsandblock{3cm}{2cm}{*}
 \setulmarginsandblock{3cm}{2cm}{*}
-\setheadfoot{14.5pt}{0pt}	% nada no rodapé
+\setheadfoot{14.5pt}{11pt}	% nada no rodapé
 % Notas de rodapé (5.2.1 NBR 14724:2011)
 \setfootins{\onelineskip}{\onelineskip}
 \checkandfixthelayout
